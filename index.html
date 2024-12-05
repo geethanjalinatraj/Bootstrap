@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iDeliver Food</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container p-0 m-2">
+
+            <!-- iDeliver Logo -->
+             <div class="d-flex flex-row d-block align-items-center justify-content-between w-100 d-sm-none">
+                <div class="">
+                    <p class="m-0">Hello Geethanjali!</p>
+                    <div class="d-flex align-items-center dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-geo-alt-fill me-2"></i> Rio De Janeiro
+                        <ul class="dropdown-menu dropdown-menu-end px-3" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                            <li><a class="dropdown-item" href="#">Spanish</a></li>
+                            <li><a class="dropdown-item" href="#">French</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mr-0">
+                    <a href="#" class="btn btn-outline-primary d-sm-none ">
+                        <i class="bi bi-cart-fill"></i>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="d-flex flex-row justify-content-between align-items-center w-100">
+
+                <div class="">
+                    <div class="d-flex align-items-center me-5">
+                        <a class="navbar-brand ml-0 d-none d-sm-block" href="#">
+                            <img src="https://appscrip.com/wp-content/uploads/2021/03/iDeliver.png" alt="iDeliver Logo" height="40" class="d-none d-sm-block">
+                        </a>
+                        
+                        <!-- Location Symbol and Text -->
+                        <div class="d-flex align-items-center d-none d-sm-block dropdown">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-geo-alt-fill me-2"></i> Rio De Janeiro
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">Spanish</a></li>
+                                <li><a class="dropdown-item" href="#">French</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="">
+                    <div class="d-flex align-items-center ms-5 me-0">
+    
+                        <!-- Search -->
+                        <div class="px-3 py-2  d-none d-sm-block">
+                            <div class="input-group w-5">
+                                <span class="input-group-text"><i class="bi bi-search"></i></span>
+                                <input type="text" class="form-control d-none d-sm-block" placeholder="Search">
+                            </div>
+                        </div>
+            
+                        <!-- Language Selector -->
+                        <div class="dropdown me-2 d-none d-sm-block">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-translate me-2"></i> Eng
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">Spanish</a></li>
+                                <li><a class="dropdown-item" href="#">French</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Cart -->
+                        <a href="#" class="btn btn-outline-primary me-1 d-none d-sm-block">
+                            <i class="bi bi-cart-fill"></i>
+                        </a>
+            
+                        <!-- Log In -->
+                        <a href="#" class="btn btn-outline-primary d-none d-sm-block">
+                            <i class="bi bi-person-fill"></i> Log In
+                        </a>
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row m-3">
+            <!-- Side Navigation Bar -->
+            <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+                <div class="position-sticky">
+                    <h4 class="px-3 py-2 d-none d-sm-block">Cuisines</h4>
+
+                    <!-- Search Bar -->
+                    <div class="px-3 py-2">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-search"></i></span>
+                            <input type="text" class="form-control d-none d-sm-block" placeholder="Search for cuisines...">
+                            <input type="text" class="form-control d-sm-none me-3" placeholder="Search for Restaurants">
+                            <!-- <div class=" btn-outline-secondary d-sm-none ">
+                                <input type="text" class="form-control w-50" placeholder="#filtersby">
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <!-- Food Categories -->
+                     
+
+                    
+                    <ul class="list-group list-group-flush d-flex flex-row flex-sm-column overflow-hidden d-none d-sm-block">
+                        <li class="list-group-item d-sm-flex align-items-center d-col ">
+                            <img src="./Beverage.jpg" alt="Beverages" class="me-3 rounded-circle " height="35" width="35">
+                            Beverages
+                        </li>
+                        <li class="list-group-item d-sm-flex align-items-center d-col">
+                            <img src="./Pizza.jpg" alt="Pizza" class="me-3 rounded-circle" height="35" width="35">
+                            Pizza
+                        </li>
+                        <li class="list-group-item d-sm-flex align-items-center d-col">
+                            <img src="./chinese.jpg" alt="Chinese" class="me-3 rounded-circle" height="35" width="35">
+                            Chinese
+                        </li>
+                        <li class="list-group-item d-sm-flex align-items-center d-col">
+                            <img src="./european.jpg" alt="European" class="me-3 rounded-circle" height="35" width="35">
+                            European
+                        </li>
+                        <li class="list-group-item d-sm-flex align-items-center d-col">
+                            <img src="./French.jpg" alt="French" class="me-3 rounded-circle" height="35" width="35">
+                            French
+                        </li>
+                        <li class="list-group-item d-sm-flex align-items-center d-col">
+                            <img src="./Burger.jpg" alt="Burger" class="me-3 rounded-circle" height="35" width="35">
+                            Burger
+                        </li>
+                        <li class="list-group-item d-sm-flex align-items-center d-col">
+                            <img src="./Lebanese.jpg" alt="Lebanese" class="me-3 rounded-circle" height="35" width="35">
+                            Lebanese
+                        </li>
+                        <li class="list-group-item d-sm-flex align-items-center d-col">
+                            <img src="./Mexican.jpg" alt="Mexican" class="me-3 rounded-circle" height="35" width="35">
+                            Mexican
+                        </li>
+                        <li class="list-group-item d-sm-flex align-items-center d-col">
+                            <img src="./Salad.jpg" alt="Salads" class="me-3 rounded-circle" height="35" width="35">
+                            Salads
+                        </li>
+                        <li class="list-group-item d-sm-flex align-items-center d-col">
+                            <img src="./Thai.jpg" alt="Thai" class="me-3 rounded-circle" height="35" width="35">
+                            Thai
+                        </li>
+                    </ul>
+
+
+                        <div id="carouselExampleIndicatorsss" class="carousel slide mb-4 d-block d-sm-none">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicatorsss" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicatorsss" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicatorsss" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <!-- <ul class="list-group list-group-flush d-flex flex-row flex-sm-column align-items-center"> -->
+
+                               <!-- Slide 1 -->
+
+                               <div class="carousel-item active">
+                                <div class="d-flex flex-row">
+                                    <li class="list-group-item align-items-center d-col ">
+                                        <img src="./chinese.jpg" alt="Beverages" class="img-fluid me-3 rounded-circle h-75 w-75 object-fit-cover">
+                                        Beverages
+                                    </li>
+                                    <li class="list-group-item align-items-center d-col">
+                                        <img src="./chinese.jpg" alt="Pizza" class="me-3 rounded-circle h-75 w-75 object-fit-cover">
+                                        Pizza
+                                    </li>
+                                    <li class="list-group-item  align-items-center d-col">
+                                        <img src="./chinese.jpg" alt="Chinese" class="me-3 rounded-circle h-75 w-75 object-fit-cover">
+                                        Chinese
+                                    </li>
+                                </div>
+                               </div>
+                            <!-- </ul> -->
+
+
+                            <!-- Slide 2 -->
+
+                            <div class="carousel-item">
+                                <div class="d-flex flex-row">
+                                    <li class="list-group-item align-items-center d-col ">
+                                        <img src="./chinese.jpg" alt="Beverages" class=" me-3 rounded-circle h-75 w-75 object-fit-cover">
+                                        Beverages
+                                    </li>
+                                    <li class="list-group-item align-items-center d-col">
+                                        <img src="./chinese.jpg" alt="Pizza" class="me-3 rounded-circle h-75 w-75 object-fit-cover">
+                                        Pizza
+                                    </li>
+                                    <li class="list-group-item align-items-center d-col">
+                                        <img src="./chinese.jpg" alt="Chinese" class="me-3 rounded-circle h-75 w-75 object-fit-cover">
+                                        Chinese
+                                    </li>
+                                    <!-- <li class="list-group-item d-sm-flex align-items-center d-col">
+                                        <img src="./chinese.jpg" alt="European" class="me-3 rounded-circle h-75 w-75 object-fit-cover">
+                                        European
+                                    </li> -->
+                                </div>
+                            </div>
+
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicatorsss" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicatorsss" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+
+
+
+
+
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-sm-4">
+
+                <div class="d-flex flex-row justify-content-between">
+                <!-- Navigation Bar -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Restaurants</li>
+                    </ol>
+                </nav>
+
+                <!-- Sorting Options -->
+                <div class="d-flex flex-row justify-content-between mb-4 d-none d-sm-block">
+                    <div>
+                        <button class="btn btn-outline-secondary me-2">Sort</button>
+                        <button class="btn btn-outline-secondary me-2">Ratings</button>
+                        <button class="btn btn-outline-secondary me-2">Cost per person</button>
+                        <button class="btn btn-outline-secondary">Order type</button>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Carousel -->
+                <div id="carouselExampleIndicators" class="carousel slide mb-4 ">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active ms-sm-auto">
+
+                            <div class="d-flex flex-row px-0 w-100">
+                                <div class="position-relative me-2 opacity-100 d-none d-sm-block">
+                                    <img src="./penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table_2829-19744.avif" class="d-block w-100 rounded" alt="Offer Image 1">
+                                    <div class="position-absolute text-light">
+                                        <a href="#" class="btn btn-success w-50 mb-4
+                                        mt-4">OFFER</a>
+                                        <div class="">
+                                            <p class="h4">50% Off</p>
+                                            <h6 class="mb-0">Exclusive Offer on All Cuisines</h6>
+                                            <p class="h6">ALBERTSONS</p>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                                <div class="position-relative me-2 opacity-100 ">
+                                    <img src="./fresh-gourmet-meal-beef-taco-salad-plate-generated-by-ai_188544-13382.avif" class="d-block w-100 rounded" alt="Offer Image 1">
+                                    <div class="position-absolute text-light">
+                                        <a href="#" class="btn btn-success w-50 mb-4
+                                        mt-4">OFFER</a>
+                                        <div class="">
+                                            <p class="h4">50% Off</p>
+                                            <h6 class="mb-0">Exclusive Offer on All Cuisines</h6>
+                                            <p class="h5">ALBERTSONS</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="position-relative opacity-100 d-none d-sm-block">
+                                    <img src="./healthy-vegetable-soup-cooked-with-fresh-meat-generated-by-ai_188544-35382.avif" class="d-block w-100 rounded" alt="Offer Image 1">
+                                    <div class="position-absolute text-light">
+                                        <a href="#" class="btn btn-success w-50 mb-4
+                                        mt-4">OFFER</a>
+                                        <div class="">
+                                            <p class="h4">50% Off</p>
+                                            <h6 class="mb-0">Exclusive Offer on All Cuisines</h6>
+                                            <p class="h5">ALBERTSONS</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <!-- Slide 2 -->
+                         <div class="carousel-item ">
+
+                            <div class="d-flex flex-row px-0 w-100">
+                                <div class="position-relative me-2 opacity-100 d-none d-sm-block">
+                                    <img src="./delicious-lobster-gourmet-seafood_23-2151713031.avif" class="d-block w-100 rounded" alt="Offer Image 1">
+                                    <div class="position-absolute text-light">
+                                        <a href="#" class="btn btn-success w-50 mb-4
+                                        mt-4">OFFER</a>
+                                        <div class="">
+                                            <p class="h4">50% Off</p>
+                                            <h6 class="mb-0">Exclusive Offer on All Cuisines</h6>
+                                            <p class="h6">ALBERTSONS</p>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                                <div class="position-relative me-2 opacity-100 ">
+                                    <img src="./fresh-gourmet-meal-beef-taco-salad-plate-generated-by-ai_188544-13382.avif" class="d-block w-100 rounded" alt="Offer Image 1">
+                                    <div class="position-absolute text-light">
+                                        <a href="#" class="btn btn-success w-50 mb-4
+                                        mt-4">OFFER</a>
+                                        <div class="">
+                                            <p class="h4">50% Off</p>
+                                            <h6 class="mb-0">Exclusive Offer on All Cuisines</h6>
+                                            <p class="h5">ALBERTSONS</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="position-relative opacity-100 d-none d-sm-block">
+                                    <img src="./healthy-vegetable-soup-cooked-with-fresh-meat-generated-by-ai_188544-35382.avif" class="d-block w-100 rounded" alt="Offer Image 1">
+                                    <div class="position-absolute text-light">
+                                        <a href="#" class="btn btn-success w-50 mb-4
+                                        mt-4">OFFER</a>
+                                        <div class="">
+                                            <p class="h4">50% Off</p>
+                                            <h6 class="mb-0">Exclusive Offer on All Cuisines</h6>
+                                            <p class="h5">ALBERTSONS</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Slide 3 -->
+                         <div class="carousel-item ">
+
+                            <div class="d-flex flex-row px-0 w-100">
+                                <div class="position-relative me-2 opacity-100 d-none d-sm-block">
+                                    <img src="./flat-lay-table-full-delicious-food-composition_23-2149141359.avif" class="d-block w-100 rounded" alt="Offer Image 1">
+                                    <div class="position-absolute text-light d-flex flex-column">
+                                        <a href="#" class="btn btn-success w-50 mb-4
+                                        mt-4">OFFER</a>
+                                        <div class="">
+                                            <p class="h4">50% Off</p>
+                                            <h6 class="mb-0">Exclusive Offer on All Cuisines</h6>
+                                            <p class="h5">ALBERTSONS</p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="position-relative mx-2 opacity-100 d-none d-sm-block">
+                                        <img src="./healthy-vegetable-soup-cooked-with-fresh-meat-generated-by-ai_188544-35382.avif" class="d-block w-100 rounded" alt="Offer Image 1">
+                                        <div class="position-absolute text-light">
+                                            <a href="#" class="btn btn-success mb-4
+                                            mt-4">OFFER</a>
+                                            <div class="">
+                                                <p class="h4">50% Off</p>
+                                                <h6 class="mb-0">Exclusive Offer on All Cuisines</h6>
+                                                <p class="h5">ALBERTSONS</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="position-relative mx-2 opacity-100 ">
+                                        <img src="./healthy-vegetable-soup-cooked-with-fresh-meat-generated-by-ai_188544-35382.avif" class="d-block w-100 rounded" alt="Offer Image 1">
+                                        <div class="position-absolute text-light">
+                                            <a href="#" class="btn btn-success mb-4
+                                            mt-4">OFFER</a>
+                                            <div class="">
+                                                <p class="h4">50% Off</p>
+                                                <h6 class="mb-0">Exclusive Offer on All Cuisines</h6>
+                                                <p class="h5">ALBERTSONS</p>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+
+                </div>
+
+
+                <!-- Recommended Restaurants -->
+                <h4 class="mb-4">Recommended Restaurants</h4>
+                <!-- Col -->
+                <div class="">
+                    <div class="d-col d-sm-flex">
+                        <!-- Restaurant Card 1 -->
+                        <div class="mb-4 me-2">
+                            <div class="card d-flex flex-row">
+                                <img src="./chinese.jpg" class="card-img" alt="Restaurant 1">
+                                <div class="card-body">
+                                    <h6 class="card-title m-0 m-sm-none">Food Zone</h6>
+                                    <p class="card-text m-0 m-sm-none">Gailway Ireland</p>
+                                    <p class="card-text text-success d-none d-sm-block"><strong>50% Off Use Coupon</strong></p>
+                                    <hr class="m-0 m-sm-none">
+                                    <div class="">
+                                        <p class="card-text"><i class="bi bi-star-fill"></i> 4.1  .  2.75km    .    Min Order: $500</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Restaurant Card 2 -->
+                        <div class="mb-4 me-2">
+                            <div class="card d-flex flex-row">
+                                <img src="./Beverage.jpg" class="card-img" alt="Restaurant 1">
+                                <div class="card-body">
+                                    <h6 class="card-title m-0 m-sm-none">Food Zone</h6>
+                                    <p class="card-text m-0 m-sm-none">Gailway Ireland</p>
+                                    <p class="card-text text-success d-none d-sm-block"><strong>50% Off Use Coupon</strong></p>
+                                    <hr class="m-0 m-sm-none">
+                                    <div class="">
+                                        <p class="card-text"><i class="bi bi-star-fill"></i> 4.1  .  2.75km    .    Min Order: $500</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Restaurant Card 3 -->
+                        <div class="mb-4">
+                            <div class="card d-flex flex-row">
+                                <img src="./pre-prepared-food-showcasing-ready-eat-delicious-meals-go_23-2151431678.avif" class="card-img" alt="Restaurant 1">
+                                <div class="card-body">
+                                    <h6 class="card-title m-0 m-sm-none">Food Zone</h6>
+                                    <p class="card-text m-0 m-sm-none">Gailway Ireland</p>
+                                    <p class="card-text text-success d-none d-sm-block"><strong>50% Off Use Coupon</strong></p>
+                                    <hr class="m-0 m-sm-none">
+                                    <div class="">
+                                        <p class="card-text"><i class="bi bi-star-fill"></i> 4.1  .  2.75km    .    Min Order: $500</p>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                    <!-- Col 2 -->
+                    <div class="d-col d-sm-flex">
+                        <!-- Restaurant Card 1 -->
+                        <div class="mb-4 me-2">
+                            <div class="card d-flex flex-row">
+                                <img src="./asian-crispy-chicken_1056733-1741.avif" class="card-img" alt="Restaurant 1">
+                                <div class="card-body">
+                                    <h6 class="card-title m-0 m-sm-none">Food Zone</h6>
+                                    <p class="card-text m-0 m-sm-none">Gailway Ireland</p>
+                                    <p class="card-text text-success d-none d-sm-block"><strong>50% Off Use Coupon</strong></p>
+                                    <hr class="m-0 m-sm-none">
+                                    <div class="">
+                                        <p class="card-text"><i class="bi bi-star-fill"></i> 4.1  .  2.75km    .    Min Order: $500</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Restaurant Card 2 -->
+                        <div class="mb-4 me-2">
+                            <div class="card d-flex flex-row">
+                                <img src="./thin-chicken-roasted-sticks-served-with-tomato-rosemary-sauce_114579-2019.avif" class="card-img" alt="Restaurant 1">
+                                <div class="card-body">
+                                    <h6 class="card-title m-0 m-sm-none">Food Zone</h6>
+                                    <p class="card-text m-0 m-sm-none">Gailway Ireland</p>
+                                    <p class="card-text text-success d-none d-sm-block"><strong>50% Off Use Coupon</strong></p>
+                                    <hr class="m-0 m-sm-none">
+                                    <div class="">
+                                        <p class="card-text"><i class="bi bi-star-fill"></i> 4.1  .  2.75km    .    Min Order: $500</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Restaurant Card 3 -->
+                        <div class="mb-4">
+                            <div class="card d-flex flex-row">
+                                <img src="./delicious-asian-noodles-concept_23-2148773773.avif" class="card-img" alt="Restaurant 1">
+                                <div class="card-body">
+                                    <h6 class="card-title">Food Zone</h6>
+                                    <p class="card-text m-0 m-sm-none">Gailway Ireland</p>
+                                    <p class="card-text text-success d-none d-sm-block"><strong>50% Off Use Coupon</strong></p>
+                                    <hr class="m-0 m-sm-none">
+                                    <div class="">
+                                        <p class="card-text"><i class="bi bi-star-fill"></i> 4.1  .  2.75km    .    Min Order: $500</p>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                       <div>
+                    </div>
+                </div>  
+            </main>
+
+
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+   
